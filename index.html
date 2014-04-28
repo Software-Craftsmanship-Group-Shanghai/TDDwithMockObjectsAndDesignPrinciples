@@ -5,10 +5,34 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Tddwithmockobjectsanddesignprinciples : TDD with Mock Objects: Design Principles and Emergent Properties (C#, JavaScript, Java, Python, Ruby)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Tddwithmockobjectsanddesignprinciples</title>
+    <title>Kata接力 - Tddwithmockobjectsanddesignprinciples</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <style>
+    body {
+      padding: 1em;
+    }
+    </style>
+    <script type="text/javascript">
+            //Use http://asaph.org/gravatar/ to generate gravatar image url
+            var spCheckCurrent = "JosephYao";
+            var spCheckPlayers = [
+            // {name: "mebusw", imgUrl:"http://www.gravatar.com/avatar/e2ecc51e27d5fd3843cc629c763c3ef8.jpg?s=64"},
+            // {name: "wubin28", imgUrl:"http://www.gravatar.com/avatar/45fd9d4ade320df61b9f32167375838b.jpg"},
+            {name: "JosephYao", imgUrl:"http://www.gravatar.com/avatar/30afaf5749bff9f05d51e80030b8c6ae.png"},
+            // {name: "gejo", imgUrl:"http://identicons.github.com/8b865520fd8fc69690ed08c5a15c8f9e.png"},
+            // {name: "zbcjackson", imgUrl:"http://www.gravatar.com/avatar/7b687090ba257bb1205c73e7e03b0527.png"},
+            // {name: "erizhang", imgUrl:"http://www.gravatar.com/avatar/80977917d128b73e6aaf68edd38b0475.jpg?s=64"}
+            ];
+
+            $(document).ready(function() {
+              TennisTable(spCheckPlayers, spCheckCurrent).render("#spCheckTurns");
+              TennisTable(pokerPlayers, pokerCurrent).render("#pokerTurns");
+          });
+    </script>
   </head>
 
   <body>
@@ -18,8 +42,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/Software-Craftsmanship-Group-Shanghai/TDDwithMockObjectsAndDesignPrinciples">View on GitHub</a>
 
-          <h1 id="project_title">Tddwithmockobjectsanddesignprinciples</h1>
-          <h2 id="project_tagline">TDD with Mock Objects: Design Principles and Emergent Properties (C#, JavaScript, Java, Python, Ruby)</h2>
+          <h1 id="project_tagline">TDD with Mock Objects: Design Principles and Emergent Properties (C#, JavaScript, Java, Python, Ruby)</h1>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/Software-Craftsmanship-Group-Shanghai/TDDwithMockObjectsAndDesignPrinciples/zipball/master">Download this project as a .zip file</a>
@@ -31,16 +54,27 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a name="tdd-with-mock-objects-design-principles-and-emerging-properties" class="anchor" href="#tdd-with-mock-objects-design-principles-and-emerging-properties"><span class="octicon octicon-link"></span></a>TDD with Mock Objects: Design Principles and Emerging Properties</h1>
 
-<p>Here you can find:</p>
-
-<ul>
-<li> the Kata <a href="https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme">Refactoring legacy code driven by tests</a> with source code (Java, C#, JavaScript, Python, Ruby, PHP), instructions and slides</li>
-<li> the <a href="https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Paper/mockobjects_emergingproperties.pdf?raw=true">paper</a> and the <a href="https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/TDD-SOLID.pdf?raw=true">paper's presentation</a>
-</li>
-</ul>
+        <h1>Kata接力的规则（适用于重构类Kata）</h1>
+        <ul>
+            <li>重构之前要先给遗留代码添加单元测试</li>
+            <li>每个玩家先添加单元测试，每次添加一个，然后交给下一个玩家。当然，必要时可以重构之前添加的测试</li>
+            <li>如果觉得已经不需要再添加单元测试了，就请重构代码。同样的，每次只重构代码的一个臭味，然后交给下一个玩家</li>
+            <li>玩家之间的讨论请尽量使用Github上提交的讨论功能</li>
+            <li>如果添加修改的测试或者重构的代码比较多，希望玩家可以分为多次来提交。这样，其他玩家可以看到完整的思路，以便于讨论</li>
+            <li>请编辑 index.html 页面来指向下一个玩家，并确认红色圆圈指向他。 (<a href="https://github.com/Software-Craftsmanship-Group-Shanghai/TDDwithMockObjectsAndDesignPrinciples/edit/gh-pages/index.html">请点击这里</a>)</li>
+            <li>玩家完成之后，请在微信群里面提醒一下</li>
+        </ul>
+        <h1>练习内容</h1>
+        <ul>
+            <li>我们需要重构的是链接中的第一个练习 <a href="https://github.com/Software-Craftsmanship-Group-Shanghai/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#1-tirepressuremonitoringsystem-exercise">TirePressureMonitoringSystem Exercise</a></li>
+            <li>本次练习使用Ruby语言，对应的代码在 <a href="https://github.com/Software-Craftsmanship-Group-Shanghai/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises/Ruby/tire_pressure_monitoring_system">这里</a></li>
+        </ul>
+        <h1>练习状态</h1>
+        <svg id="spCheckTurns"></svg>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="tennis.js"></script>
       </section>
     </div>
 
