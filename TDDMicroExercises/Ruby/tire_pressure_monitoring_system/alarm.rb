@@ -3,7 +3,7 @@ require_relative './sensor'
 class Alarm
 
   attr_reader :alarm_on
-
+  attr_accessor :sensor
   def initialize
     @sensor = Sensor.new
     @alarm_on = false
