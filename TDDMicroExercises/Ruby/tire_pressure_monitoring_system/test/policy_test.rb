@@ -25,7 +25,7 @@ class PolicyTest < Test::Unit::TestCase
   end
 
   def test_alarm_is_off_after_policy_initialized
-    assert_equal false, alarm.is_alarm_on()
+    assert_equal false, @alarm.is_alarm_on()
   end
 
 end
