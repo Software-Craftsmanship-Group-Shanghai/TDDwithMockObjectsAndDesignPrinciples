@@ -44,7 +44,7 @@ class AlarmTest < Test::Unit::TestCase
     assert_equal false, @alarm.alarm_on
   end
 
-  def test_alerm_is_on_when_pressure_back_within_range
+  def test_alarm_is_on_when_pressure_back_within_range
     @sensor.psi_value = 22
     @alarm.check
     @sensor.psi_value = 20
