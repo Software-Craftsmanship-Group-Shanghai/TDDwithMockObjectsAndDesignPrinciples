@@ -6,4 +6,9 @@ class Policy
     @sensor = sensor
     @alarm = alarm
   end
+
+  def detect
+  
+  end
+
 end
