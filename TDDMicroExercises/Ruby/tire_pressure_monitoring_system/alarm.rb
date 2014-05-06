@@ -15,6 +15,14 @@ class Alarm
     @alarm_on = true if pressure < LOW_PRESSURE || HIGH_PRESSURE < pressure
   end
 
+  def on
+    @alarm_on = true
+  end
+
+  def off
+    @alarm_on = false
+  end
+
   def is_alarm_on
     return @alarm_on
   end

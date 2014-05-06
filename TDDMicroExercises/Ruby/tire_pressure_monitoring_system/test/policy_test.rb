@@ -21,7 +21,7 @@ class PolicyTest < Test::Unit::TestCase
   def setup
     @sensor = MockSensor.new(0)
     @alarm = Alarm.new(@sensor)
-    @policy = Policy.new(@sesor, @alarm)
+    @policy = Policy.new(@sensor, @alarm)
   end
 
   def test_alarm_is_off_after_policy_initialized

@@ -8,7 +8,14 @@ class Policy
   end
 
   def detect
-  
+    pressure = @sensor.pop_next_pressure_psi_value()
+    if pressure < LOW_PRESSURE || HIGH_PRESSURE < pressure
+      @alarm.on()
+    end
   end
+
+private
+  LOW_PRESSURE = 17
+  HIGH_PRESSURE = 21
 
 end
