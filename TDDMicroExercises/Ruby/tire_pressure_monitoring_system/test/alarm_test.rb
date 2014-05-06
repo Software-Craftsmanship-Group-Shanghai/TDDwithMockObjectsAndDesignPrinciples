@@ -54,4 +54,8 @@ class AlarmTest < Test::Unit::TestCase
     assert_equal true, @alarm.alarm_on
   end
 
+  def test_alarm_default_initialize
+    @alarm = Alarm.new
+    assert_equal false, @alarm.alarm_on || false
+  end
 end
