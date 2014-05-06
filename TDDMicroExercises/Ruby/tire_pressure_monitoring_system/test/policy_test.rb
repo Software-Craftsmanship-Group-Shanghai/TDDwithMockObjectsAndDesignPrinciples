@@ -29,7 +29,7 @@ class PolicyTest < Test::Unit::TestCase
   end
 
   def test_alarm_is_on_after_pressure_exceeds_high_pressure
-    @sensor.psi_value = 30
+    @sensor.psi_value = 22
     @policy.detect
     assert_equal true, @alarm.is_alarm_on
   end
