@@ -28,6 +28,9 @@ public class TickerDispenserTest {
 				
 		assertEquals(2, ticket.getTurnNumber());
 	}
-	
+
+    // TODO: a new ticket must have the turn number subsequent to the previous ticket
+    // TODO: a new ticket must have the turn number subsequent to the previous ticket from another dispenser
+    // TODO: after ticket 10 comes ticket 11
 	
 }
