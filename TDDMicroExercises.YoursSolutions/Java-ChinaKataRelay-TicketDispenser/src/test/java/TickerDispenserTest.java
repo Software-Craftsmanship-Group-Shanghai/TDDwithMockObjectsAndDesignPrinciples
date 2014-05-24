@@ -33,8 +33,11 @@ public class TickerDispenserTest {
     @Test
     public void a_new_ticket_must_have_the_turn_number_subsequent_to_the_previous_ticket() {
         // Arrange
+        TicketDispenser ticketDispenser = new TicketDispenser();
 
         // Act
+        TurnTicket previousTicket = ticketDispenser.getTurnTicket();
+        TurnTicket newTicket = ticketDispenser.getTurnTicket();
 
         // Assert
         assertTrue(newTicket.getTurnNumber() > previousTicket.getTurnNumber());
