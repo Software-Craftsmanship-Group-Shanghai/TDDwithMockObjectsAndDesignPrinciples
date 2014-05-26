@@ -23,7 +23,7 @@ public class TicketDispenserTest {
 
         TurnTicket newTicket = ticketDispenser.getTurnTicket();
 
-        assertTrue(newTicket.getTurnNumber() > dispensedTicket.getTurnNumber());
+        assertEquals(1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
     }
 
     @Test
