@@ -17,6 +17,7 @@ public class TicketDispenserTest {
     }
 
     @Test
+    //proposed name: nextTicketFromThisDispenser.
     public void a_new_ticket_must_have_the_turn_number_larger_than_a_dispensed_ticket() {
 
         TurnTicket newTicket = ticketDispenser.getTurnTicket();
@@ -25,14 +26,13 @@ public class TicketDispenserTest {
     }
 
     @Test
+    //proposed name: nextTicketFromNextDispenser.
     public void a_new_ticket_must_have_the_turn_number_larger_than_a_dispensed_ticket_from_another_dispenser() {
 
         TurnTicket newTicket = getTurnTicketFromAnotherDispenser();
 
         // Assert
         assertTrue(newTicket.getTurnNumber() > dispensedTicket.getTurnNumber());
-
-
     }
 
     private TurnTicket getTurnTicketFromAnotherDispenser() {
