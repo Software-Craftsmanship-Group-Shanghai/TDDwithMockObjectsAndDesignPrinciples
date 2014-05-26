@@ -19,7 +19,7 @@ public class TicketDispenserTest {
 
     @Test
     public void theFirstTicket() {
-        assertEquals(1, dispensedTicket.getTurnNumber());
+        assertEquals("Ticket must start from 1.", 1, dispensedTicket.getTurnNumber());
     }
 
     @Test
@@ -28,7 +28,7 @@ public class TicketDispenserTest {
 
         TurnTicket newTicket = ticketDispenser.getTurnTicket();
 
-        assertEquals(1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
+        assertEquals("Next ticket must be current ticket + 1", 1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
     }
 
     @Test
@@ -38,7 +38,7 @@ public class TicketDispenserTest {
         TurnTicket newTicket = getTurnTicketFromAnotherDispenser();
 
         // Assert
-        assertEquals(1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
+        assertEquals("Next ticket from another dispenser must be current ticket + 1", 1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
     }
 
     private TurnTicket getTurnTicketFromAnotherDispenser() {
