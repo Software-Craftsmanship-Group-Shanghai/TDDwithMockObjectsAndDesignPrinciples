@@ -3,6 +3,7 @@ import org.junit.Test;
 import tddmicroexercises.turnticketdispenser.TicketDispenser;
 import tddmicroexercises.turnticketdispenser.TurnTicket;
 
+import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class TicketDispenserTest {
@@ -32,7 +33,7 @@ public class TicketDispenserTest {
         TurnTicket newTicket = getTurnTicketFromAnotherDispenser();
 
         // Assert
-        assertTrue(newTicket.getTurnNumber() > dispensedTicket.getTurnNumber());
+        assertEquals(1, newTicket.getTurnNumber() - dispensedTicket.getTurnNumber());
     }
 
     private TurnTicket getTurnTicketFromAnotherDispenser() {
