@@ -18,11 +18,6 @@ public class TicketDispenserTest {
     }
 
     @Test
-    public void theFirstTicket() {
-        assertEquals("Ticket must start from 1.", 1, dispensedTicket.getTurnNumber());
-    }
-
-    @Test
     //proposed name: nextTicketFromThisDispenser.
     public void a_new_ticket_must_have_the_turn_number_larger_than_a_dispensed_ticket() {
 
