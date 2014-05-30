@@ -1,10 +1,9 @@
+package tddmicroexercises.turnticketdispenser;
+
 import org.junit.Before;
 import org.junit.Test;
-import tddmicroexercises.turnticketdispenser.TicketDispenser;
-import tddmicroexercises.turnticketdispenser.TurnTicket;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class TicketDispenserTest {
 
